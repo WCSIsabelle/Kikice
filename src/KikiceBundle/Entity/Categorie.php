@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="categorie")
  * @ORM\Entity(repositoryClass="KikiceBundle\Repository\categorieRepository")
  */
-class categorie
+class Categorie
 {
     /**
      * @var int
@@ -38,6 +38,7 @@ class categorie
     {
         return $this->id;
     }
+
 
     /**
      * Set nom

@@ -98,5 +98,28 @@ class reponse
     {
         return $this->statut;
     }
-}
 
+    /**
+     * Set question
+     *
+     * @param \KikiceBundle\Entity\question $question
+     *
+     * @return reponse
+     */
+    public function setQuestion(\KikiceBundle\Entity\question $question = null)
+    {
+        $this->question = $question;
+
+        return $this;
+    }
+
+    /**
+     * Get question
+     *
+     * @return \KikiceBundle\Entity\question
+     */
+    public function getQuestion()
+    {
+        return $this->question;
+    }
+}

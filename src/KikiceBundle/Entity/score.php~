@@ -73,5 +73,52 @@ class score
     {
         return $this->resultat;
     }
-}
 
+    /**
+     * Set user
+     *
+     * @param \KikiceBundle\Entity\user $user
+     *
+     * @return score
+     */
+    public function setUser(\KikiceBundle\Entity\user $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \KikiceBundle\Entity\user
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set categorie
+     *
+     * @param \KikiceBundle\Entity\categorie $categorie
+     *
+     * @return score
+     */
+    public function setCategorie(\KikiceBundle\Entity\categorie $categorie = null)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Get categorie
+     *
+     * @return \KikiceBundle\Entity\categorie
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
+}

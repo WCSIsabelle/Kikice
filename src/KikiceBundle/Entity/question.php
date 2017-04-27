@@ -30,7 +30,7 @@ class question
 
     /**
      * @var int
-     * @ORM\ManyToOne(targetEntity="categorie")
+     * @ORM\ManyToOne(targetEntity="Categorie")
      */
     private $categorie;
 
