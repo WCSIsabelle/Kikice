@@ -1,0 +1,4 @@
+kikice:
+    resource: "@KikiceBundle/Controller/"
+    type:     annotation
+    prefix:   /

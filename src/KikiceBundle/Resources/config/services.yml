@@ -1,0 +1,4 @@
+services:
+#    kikice.example:
+#        class: KikiceBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
