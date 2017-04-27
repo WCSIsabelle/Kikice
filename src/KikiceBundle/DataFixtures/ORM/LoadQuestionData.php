@@ -8,13 +8,13 @@
 namespace KikiceBundle\DataFixtures\ORM;
 
 use Doctrine\Common\DataFixtures\AbstractFixture;
-use Doctrine\Common\DataFixtures\FixtureInterface;
+use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use KikiceBundle\Entity\Question;
 
 
 
-class LoadQuestionData extends AbstractFixture implements FixtureInterface
+class LoadQuestionData extends AbstractFixture implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
@@ -33,23 +33,23 @@ class LoadQuestionData extends AbstractFixture implements FixtureInterface
             ),
             array(
                 "contenu" => "Peut-on faire de la confiture de coings dans une casserole ronde ?",
-                "categorie" => "cat7"
+                "categorie" => "cat4"
             ),
             array(
                 "contenu" => "Que devient le vent coupé par un coupe-vent ?",
-                "categorie" => "cat8"
-            ),
-            array(
-                "contenu" => "Si j'appelle un chat Terton peut-il rester scotché ?",
                 "categorie" => "cat5"
             ),
             array(
-                "contenu" => "Entre le caillou et le coquillage, lequel était le mieux coté en bourse à la préhistoire ?",
+                "contenu" => "Si j'appelle un chat Terton peut-il rester scotché ?",
                 "categorie" => "cat6"
             ),
             array(
+                "contenu" => "Entre le caillou et le coquillage, lequel était le mieux coté en bourse à la préhistoire ?",
+                "categorie" => "cat7"
+            ),
+            array(
                 "contenu" => "Si le hasard fait si bien les choses, où puis-je le trouver pour lui déléguer quelques affaires urgentes ? ",
-                "categorie" => "cat4"
+                "categorie" => "cat8"
             ),
         );
 
