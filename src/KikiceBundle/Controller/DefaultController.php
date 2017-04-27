@@ -12,6 +12,8 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+
         return $this->render('KikiceBundle:Default:accueil.html.twig');
+
     }
 }
