@@ -10,16 +10,46 @@ namespace KikiceBundle\DataFixtures\ORM;
 
 
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Common\Persistence\ObjectManager
+use KikiceBundle\Entity\categorie;
 
-class LoadCategorieData
+class LoadCategorieData extends Abstra
 {
 
     public function load(ObjectManager $manager)
     {
         $categories = array(
             array(
-                "nom" => "kikicekadi",
+                "nom" => "kikicékablagué",
             ),
+            array(
+                "nom" => "kikicékamenti",
+            ),
+            array(
+                "nom" => "kikicéskadiFranky",
+            ),
+            array(
+                "nom" => "kikicéou",
+            ),
+            array(
+                "nom" => "kikicékadidanlmouvi",
+            ),
+            array(
+                "nom" => "kikicékachanté",
+            ),
+            array(
+                "nom" => "kikicékipukidi"
+            ),
+            array(
+                "nom" => "kikicékigif",
+            )
         );
+
+        foreach ($categories as $categorie){
+            $categorie = new categorie();
+            $categorie->setNom($categorie['nom']);
+            $manager->persist($categorie);
+        }
+        $manager->flush();
     }
 }
