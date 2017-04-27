@@ -10,4 +10,5 @@ namespace KikiceBundle\Repository;
  */
 class userRepository extends \Doctrine\ORM\EntityRepository
 {
+
 }
