@@ -3,14 +3,16 @@
 namespace KikiceBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
+
 
 /**
- * user
+ * User
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="KikiceBundle\Repository\userRepository")
  */
-class user
+class User extends BaseUser
 {
     /**
      * @var int
@@ -19,7 +21,12 @@ class user
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
     /**
      * @var string
