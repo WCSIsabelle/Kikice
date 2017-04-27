@@ -62,5 +62,8 @@ class LoadQuestionData extends AbstractFixture implements FixtureInterface
         }
         $manager->flush();
     }
-
+    public function getOrder()
+    {
+        return 2;
+    }
 }
