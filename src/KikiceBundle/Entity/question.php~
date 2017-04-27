@@ -67,5 +67,28 @@ class question
     {
         return $this->contenu;
     }
-}
 
+    /**
+     * Set categorie
+     *
+     * @param \KikiceBundle\Entity\categorie $categorie
+     *
+     * @return question
+     */
+    public function setCategorie(\KikiceBundle\Entity\categorie $categorie = null)
+    {
+        $this->categorie = $categorie;
+
+        return $this;
+    }
+
+    /**
+     * Get categorie
+     *
+     * @return \KikiceBundle\Entity\categorie
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
+}
