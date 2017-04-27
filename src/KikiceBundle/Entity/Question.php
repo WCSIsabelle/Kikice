@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="question")
  * @ORM\Entity(repositoryClass="KikiceBundle\Repository\questionRepository")
  */
-class question
+class Question
 {
     /**
      * @var int
@@ -90,5 +90,10 @@ class question
     public function getCategorie()
     {
         return $this->categorie;
+    }
+
+    public function __toString()
+    {
+        return $this->contenu;
     }
 }
