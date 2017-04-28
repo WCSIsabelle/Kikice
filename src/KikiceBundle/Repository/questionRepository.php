@@ -10,4 +10,13 @@ namespace KikiceBundle\Repository;
  */
 class questionRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findQuestionInExpert($categorie)
+    {
+        $query = $this->createQueryBuilder('q')
+            ->where('q.categorie=:categ')
+            ->setParameter('categ', $categorie)
+            ->getQuery();
+
+        return $query->getResult();
+    }
 }

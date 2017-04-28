@@ -10,4 +10,12 @@ namespace KikiceBundle\Repository;
  */
 class reponseRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findReponseInQuestion($question)
+    {
+        $query = $this->createQueryBuilder('r')
+            ->where('r.question=:categ')
+            ->setParameter('categ', $question)
+            ->getQuery();
+        return $query->getResult();
+    }
 }

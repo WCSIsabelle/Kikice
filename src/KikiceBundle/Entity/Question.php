@@ -35,6 +35,12 @@ class Question
     private $categorie;
 
     /**
+     * @var string
+     * @ORM\OneToMany(targetEntity="reponse", mappedBy="question")
+     */
+    private $reponses;
+
+    /**
      * Get id
      *
      * @return int
@@ -95,5 +101,46 @@ class Question
     public function __toString()
     {
         return $this->contenu;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->reponses = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add reponse
+     *
+     * @param \KikiceBundle\Entity\Reponse $reponse
+     *
+     * @return Question
+     */
+    public function addReponse(\KikiceBundle\Entity\Reponse $reponse)
+    {
+        $this->reponses[] = $reponse;
+
+        return $this;
+    }
+
+    /**
+     * Remove reponse
+     *
+     * @param \KikiceBundle\Entity\Reponse $reponse
+     */
+    public function removeReponse(\KikiceBundle\Entity\Reponse $reponse)
+    {
+        $this->reponses->removeElement($reponse);
+    }
+
+    /**
+     * Get reponses
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getReponses()
+    {
+        return $this->reponses;
     }
 }

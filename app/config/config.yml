@@ -83,3 +83,4 @@ easy_admin:
         - KikiceBundle\Entity\Categorie
         - KikiceBundle\Entity\Question
         - KikiceBundle\Entity\reponse
+    site_name: Merci Guillaume

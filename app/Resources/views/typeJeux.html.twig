@@ -1,0 +1,34 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}
+    Kikicé - Choisissez votre jeu
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-xs-12 text-center titre-choix-jeu">
+            <h1>Choisissez votre jeu</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-5">
+            <div class="thumbnail jeu1 text-center">
+
+                <h1>KikicéskadiFranky</h1>
+                <img src="../css/img/francky.gif">
+                <a type="button" class="btn btn-primary" href="{{ path('jeu_Franky') }}">Jouer</a>
+            </div>
+        </div>
+
+
+        <div class="col-xs-5">
+            <div class="thumbnail jeu2 text-center">
+
+                <h1>Kikicékadidanlmouvi</h1>
+                <img src="../css/img/simon.gif">
+                <a type="button" class="btn btn-primary" href="{{ path('jeu_Mouvi') }}">Jouer</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

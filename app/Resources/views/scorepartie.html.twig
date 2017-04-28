@@ -1,0 +1,19 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+    <div class="row score">
+        <div class="col-lg-offset-2 col-lg-8 champs2 text-center">
+          Votre score est de :  {{ count }}
+
+            {% if count == 5 %}
+                <img src="../css/img/coiffe.gif">
+            {% elseif count < 5 %}
+                <img src="../css/img/maitresse.gif">
+            {% elseif count > 5 %}
+                <img src="../css/img/gagner.gif">
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

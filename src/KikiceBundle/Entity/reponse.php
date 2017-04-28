@@ -37,7 +37,7 @@ class reponse
 
     /**
      * @var int
-     * @ORM\ManyToOne(targetEntity="question")
+     * @ORM\ManyToOne(targetEntity="Question", inversedBy="reponses")
      */
     private $question;
 
@@ -111,6 +111,11 @@ class reponse
         $this->question = $question;
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->choix;
     }
 
     /**

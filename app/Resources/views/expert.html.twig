@@ -1,0 +1,27 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+
+    <div class="row espace">
+        <div class="col-lg-offset-3 col-lg-5 champs">
+            {% for question in questions %}
+
+                <h3>{{ question.contenu }}</h3><br/>
+                <form action="{{ path('score') }}" method="post">
+                {% for reponse in question.reponses %}
+                    <div class="form-group">
+                        <input type="radio" name="reponse_{{ question.id }}" id="{{ reponse.id }}" value="{{ reponse.statut }}">
+                        <label for="{{ reponse.id }}">{{ reponse.choix }}</label>
+                    </div>
+                {% endfor %}
+
+            {% endfor %}
+
+                    <input type="submit" name="envoi" value="envoyer">
+
+            </form>
+
+        </div>
+    </div>
+
+{% endblock %}

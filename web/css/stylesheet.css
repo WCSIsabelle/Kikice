@@ -1,7 +1,59 @@
 .jouer{
     text-align: center;
-    border: 2px solid black;
-    height: 300px;
+    border: 10px solid white;
+    height: 150px;
     border-radius: 30px;
-    background-color: #5cb85c;
+    opacity: 0.7;
+    text-shadow: 0px 1px 0px white;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgba( 0, 0, 0, 0.5),
+    0 -1px 0 rgba( 255, 255, 255, 0.4);
+}
+.jouer h1{
+    font-weight: bolder;
+    color: white;
+    margin-top: 25px;
+    font-size: 80px;
+}
+.bouton{
+    padding-top: 160px;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+body{
+    background-image: url("img/superbattle.jpg");
+    background-size: cover;
+}
+.champs{
+    opacity: 0.95;
+    margin-top: 50px;
+    padding-top: 30px;
+    background-color: white;
+}
+.titre-choix-jeu h1{
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.thumbnail{
+    height: 400px;
+    opacity: 0.95;
+}
+.score{
+    font-size: 80px;
+}
+.jeu2 a{
+    margin-top: 60px;
+}
+.jeu1 a{
+    margin-top: 5px;
+}
+.champs2{
+    opacity: 0.95;
+    margin-top: 50px;
+    padding-top: 30px;
+    background-color: white;
+    height: 600px;
 }
